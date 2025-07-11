@@ -60,6 +60,7 @@ body > div {
 
 .project-link, .thoughts-link, .resume-link, .contact-link, .home-link, .about-link {
   position: absolute;
+  height: 35px;
   font-size: 24px;
   font-family: Inter;
   font-weight: 654;
