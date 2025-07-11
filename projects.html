@@ -5,46 +5,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nicole Zhang — Projects</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div>
-    <div class="spade">♠️</div>
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <span class="spade">♠️</span>
+      <span class="name-title">Chuhan Nicole Zhang</span>
+    </a>
+    
+    <nav class="nav-desktop">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About Me</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="thoughts.html" class="nav-link">Thoughts</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="assets/nicole-zhang-resume.pdf" target="_blank" class="nav-link">Resume</a>
+    </nav>
 
-    <!-- Clicking the name brings you home -->
-    <a href="index.html" class="name-title hover-link">Chuhan Nicole Zhang</a>
-
-    <!-- Navigation Links -->
-    <a href="projects.html" class="project-link nav-link">View My Projects</a>
-    <a href="thoughts.html" class="thoughts-link nav-link">Read My Thoughts</a>
-    <a href="assets/nicole-zhang-resume.pdf" target="_blank" class="resume-link nav-link">Resumé/CV</a>
-    <div class="contact-link nav-link">Contact</div>
-    <div class="home-link nav-link">Home</div>
-    <div class="about-link nav-link">About Me</div>
-
-    <!-- Section Title -->
-    <div class="intro-text" style="top: 120px; left: 100px; max-width: 1000px;">
-      <span class="name-highlight">Project Showcase</span><br /><br />
-      Here are a few selected projects I've built — from quantitative trading systems to market simulations and machine learning pipelines. Click to explore!
+    <div class="menu-toggle" onclick="toggleMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+  </header>
 
-    <!-- MarketM Project Preview -->
-    <div class="project-preview" style="top: 380px; left: 100px;">
-      <a href="https://marketm-chzzn.streamlit.app/" target="_blank">
-        <img src="assets/marketM-preview.png" alt="MarketM Project Preview" />
-        Visit MarketM Streamlit App →
-      </a>
+  <!-- Mobile Navigation -->
+  <nav class="nav-mobile" id="mobileNav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About Me</a>
+    <a href="projects.html" class="nav-link">Projects</a>
+    <a href="thoughts.html" class="nav-link">Thoughts</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="assets/nicole-zhang-resume.pdf" target="_blank" class="nav-link">Resume</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="content-section">
+      <h1>Projects</h1>
+      <p>Here are a few selected projects I've built — from quantitative trading systems to market simulations and machine learning pipelines.</p>
+      
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="assets/marketM-preview.png" alt="MarketM Project Preview" />
+          <div class="project-card-content">
+            <h3>MarketM</h3>
+            <p>An AI-powered trading system that combines machine learning with quantitative analysis to identify market opportunities.</p>
+            <a href="https://marketm-chzzn.streamlit.app/" target="_blank">View Project →</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-card-content">
+            <h3>Weather Forecasting Model</h3>
+            <p>A multimodal machine learning system for storm prediction using deep learning techniques and satellite imagery.</p>
+            <a href="#" target="_blank">View Project →</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-card-content">
+            <h3>Economic Game Engine</h3>
+            <p>A game-based economic simulation blending macro models with blockchain mechanics for realistic market behavior.</p>
+            <a href="#" target="_blank">View Project →</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-card-content">
+            <h3>Bond Trading Analytics</h3>
+            <p>AI-powered analytics tools developed for bond desks in New York and China, focusing on risk assessment and yield optimization.</p>
+            <a href="#" target="_blank">View Project →</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-card-content">
+            <h3>Market Simulation Framework</h3>
+            <p>A comprehensive framework for simulating financial markets with realistic agent behavior and market dynamics.</p>
+            <a href="#" target="_blank">View Project →</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-card-content">
+            <h3>Jazz Pattern Recognition</h3>
+            <p>Machine learning analysis of jazz improvisation patterns, exploring the mathematical structures underlying musical creativity.</p>
+            <a href="#" target="_blank">View Project →</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </main>
 
-    <!-- Add more projects as needed in the same structure -->
-    <!-- Example:
-    <div class="project-preview" style="top: 780px; left: 100px;">
-      <a href="PROJECT_LINK_HERE" target="_blank">
-        <img src="assets/preview-image.jpg" alt="Preview" />
-        Project Name →
-      </a>
-    </div>
-    -->
+  <script>
+    function toggleMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuToggle = document.querySelector('.menu-toggle');
+      
+      mobileNav.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    }
 
-  </div>
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuToggle = document.querySelector('.menu-toggle');
+      
+      if (!mobileNav.contains(event.target) && !menuToggle.contains(event.target)) {
+        mobileNav.classList.remove('active');
+        menuToggle.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html>
