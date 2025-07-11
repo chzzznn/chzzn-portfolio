@@ -1,147 +1,137 @@
 /* style.css */
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
+html, body {
   margin: 0;
   padding: 0;
-  background: white;
   font-family: 'Inter', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: white;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  gap: 20px;
-  flex-wrap: wrap;
-  background-color: white;
+body > div {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto;
+  background: white;
+  overflow: hidden;
+  transform-origin: top left;
+  transform: scale(1);
 }
 
-.spade {
-  font-size: 48px;
-  font-family: 'Alike Angular', serif;
-  color: black;
-  text-transform: capitalize;
+@media (max-width: 1440px) {
+  body > div {
+    transform: scale(calc(100vw / 1440));
+  }
 }
+
+@media (max-height: 1024px) and (max-width: 1440px) {
+  body > div {
+    transform: scale(min(calc(100vw / 1440), calc(100vh / 1024)));
+  }
+}
+
+/* Fixed layout elements */
 
 .name-title {
-  font-size: 24px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  position: absolute;
+  width: 262px;
+  height: 35px;
+  left: 99px;
+  top: 41px;
   color: #322E2E;
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 654;
   text-transform: capitalize;
   word-wrap: break-word;
 }
 
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+.background-box {
+  position: absolute;
+  width: 370px;
+  height: 373px;
+  left: 46px;
+  top: 106px;
+  background: #D9D9D9;
 }
 
-.nav-link {
+.project-link, .thoughts-link, .resume-link, .contact-link, .home-link, .about-link {
+  position: absolute;
   font-size: 24px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-family: Inter;
+  font-weight: 654;
   color: black;
   text-transform: capitalize;
   word-wrap: break-word;
   text-decoration: none;
-  transition: all 0.3s ease;
 }
 
-.nav-link:hover,
-.hover-link:hover {
-  color: #6D2F2F;
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 2rem;
-  gap: 2rem;
-}
-
-.placeholder-img {
-  width: 300px;
-  max-width: 90%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  object-fit: cover;
-}
-
-.intro-box {
-  max-width: 600px;
-  font-family: 'Iowan Old Style', serif;
-  font-weight: 700;
-  font-size: 20px;
-  color: black;
-  text-transform: capitalize;
-  word-wrap: break-word;
-}
-
-.intro-box .name {
-  font-size: 40px;
-  font-family: 'Iowan Old Style', serif;
-  font-weight: 700;
-  text-transform: capitalize;
-  color: black;
-  word-wrap: break-word;
-}
+.project-link { left: 535px; top: 41px; width: 210px; height: 32px; }
+.thoughts-link { left: 919px; top: 41px; width: 232px; height: 32px; }
+.resume-link { left: 158px; top: 624px; width: 143px; height: 36px; }
+.contact-link { left: 158px; top: 670px; width: 143px; height: 36px; }
+.home-link { left: 158px; top: 533px; width: 143px; height: 36px; }
+.about-link { left: 158px; top: 579px; width: 143px; height: 36px; }
 
 .quote {
+  position: absolute;
+  left: 52px;
+  top: 739px;
+  width: 693px;
+  height: 55px;
   color: #6D2F2F;
   font-size: 32px;
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-weight: 400;
   text-transform: capitalize;
   word-wrap: break-word;
-  text-align: center;
-  padding: 2rem;
 }
 
-.dice {
-  display: inline-block;
-  animation: spin 4s linear infinite;
-  font-size: 1.2em;
+.intro-text {
+  position: absolute;
+  width: 627px;
+  height: 473px;
+  left: 509px;
+  top: 142px;
+  color: black;
+  font-size: 20px;
+  font-family: "Iowan Old Style", serif;
+  font-weight: 700;
+  text-transform: capitalize;
+  word-wrap: break-word;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.name-highlight {
+  font-size: 40px;
+  font-family: "Iowan Old Style", serif;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: black;
+  word-wrap: break-word;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.spade {
+  position: absolute;
+  width: 48px;
+  height: 49px;
+  left: 22px;
+  top: 21px;
+  font-size: 48px;
+  font-family: "Alike Angular", serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: black;
+  word-wrap: break-word;
+}
 
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .quote {
-    font-size: 20px;
-    padding: 1rem;
-  }
-
-  .nav-link {
-    font-size: 20px;
-  }
+.headshot {
+  position: absolute;
+  width: 373px;
+  height: 373px;
+  left: 43px;
+  top: 106px;
+  object-fit: cover;
 }
