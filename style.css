@@ -1,5 +1,19 @@
 /* style.css */
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
 body {
   background: white;
   overflow: hidden;
@@ -47,29 +61,36 @@ body {
   width: 693px;
 }
 
-.intro-box {
-  position: absolute;
-  left: 509px;
-  top: 142px;
-  width: 627px;
-  height: 473px;
-  font-family: 'Iowan Old Style', serif;
-  font-weight: 700;
-  text-transform: capitalize;
-  color: black;
-  font-size: 20px;
-}
-
-.intro-box span.name {
-  font-size: 40px;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 2rem;
 }
 
 .placeholder-img {
-  position: absolute;
-  left: 43px;
-  top: 106px;
-  width: 373px;
-  height: 373px;
+  width: 300px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.intro-box {
+  max-width: 600px;
+  font-family: 'Iowan Old Style', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: black;
+  text-transform: none;
+}
+
+
+.intro-box span.name {
+  font-size: 40px;
 }
 
 .box {
@@ -88,3 +109,58 @@ body {
   font-size: 48px;
   font-family: 'Alike Angular', serif;
 }
+
+/* hover effect */
+.hover-link {
+  position: relative;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-link:hover {
+  color: #6D2F2F;
+}
+
+.nav-link {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #6D2F2F;
+  transform: scale(1.05);
+}
+
+/* spinny dice */
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+.dice {
+  display: inline-block;
+  animation: spin 4s linear infinite;
+  font-size: 1.2em;
+}
+
+/* improve mobile styling */
+@media (max-width: 768px) {
+  .quote {
+    font-size: 20px;
+    width: 90%;
+    left: 5%;
+    top: auto;
+    position: static;
+    margin-top: 2rem;
+  }
+
+  .nav-link, .hover-link {
+    font-size: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
