@@ -9,59 +9,61 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-a {
-  text-decoration: none;
-  color: inherit;
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: white;
 }
 
-body {
-  background: white;
-  overflow: hidden;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
+.spade {
+  font-size: 48px;
+  font-family: 'Alike Angular', serif;
+  color: black;
+  text-transform: capitalize;
 }
 
 .name-title {
-  color: #322E2E;
   font-size: 24px;
-  font-weight: 600;
-  text-transform: capitalize;
-  position: absolute;
-  left: 99px;
-  top: 41px;
-}
-
-.project-link, .thoughts-link, .resume-link, .contact-link, .home-link, .about-link {
-  color: black;
-  font-size: 24px;
-  font-weight: 600;
-  text-transform: capitalize;
-  position: absolute;
   font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #322E2E;
+  text-transform: capitalize;
+  word-wrap: break-word;
 }
 
-.project-link { left: 535px; top: 41px; }
-.thoughts-link { left: 919px; top: 41px; }
-.resume-link { left: 158px; top: 624px; }
-.contact-link { left: 158px; top: 670px; }
-.home-link { left: 158px; top: 533px; }
-.about-link { left: 158px; top: 579px; }
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 
-.quote {
-  color: #6D2F2F;
-  font-size: 32px;
-  font-family: 'Dancing Script', cursive;
-  font-weight: 400;
+.nav-link {
+  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: black;
   text-transform: capitalize;
-  position: absolute;
-  left: 52px;
-  top: 739px;
-  width: 693px;
+  word-wrap: break-word;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.hover-link:hover {
+  color: #6D2F2F;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .container {
@@ -86,58 +88,30 @@ body {
   max-width: 600px;
   font-family: 'Iowan Old Style', serif;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 20px;
   color: black;
-  text-transform: none;
+  text-transform: capitalize;
+  word-wrap: break-word;
 }
 
-
-.intro-box span.name {
+.intro-box .name {
   font-size: 40px;
+  font-family: 'Iowan Old Style', serif;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: black;
+  word-wrap: break-word;
 }
 
-.box {
-  background: #D9D9D9;
-  position: absolute;
-  width: 370px;
-  height: 373px;
-  left: 46px;
-  top: 106px;
-}
-
-.spade {
-  position: absolute;
-  top: 21px;
-  left: 22px;
-  font-size: 48px;
-  font-family: 'Alike Angular', serif;
-}
-
-/* hover effect */
-.hover-link {
-  position: relative;
-  transition: color 0.3s ease;
-  cursor: pointer;
-}
-
-.hover-link:hover {
+.quote {
   color: #6D2F2F;
-}
-
-.nav-link {
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.nav-link:hover {
-  color: #6D2F2F;
-  transform: scale(1.05);
-}
-
-/* spinny dice */
-@keyframes spin {
-  0% { transform: rotate(0deg);}
-  100% { transform: rotate(360deg);}
+  font-size: 32px;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 400;
+  text-transform: capitalize;
+  word-wrap: break-word;
+  text-align: center;
+  padding: 2rem;
 }
 
 .dice {
@@ -146,24 +120,28 @@ body {
   font-size: 1.2em;
 }
 
-/* improve mobile styling */
-@media (max-width: 768px) {
-  .quote {
-    font-size: 20px;
-    width: 90%;
-    left: 5%;
-    top: auto;
-    position: static;
-    margin-top: 2rem;
-  }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
-  .nav-link, .hover-link {
-    font-size: 20px;
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .container {
     flex-direction: column;
     align-items: center;
   }
-}
 
+  .quote {
+    font-size: 20px;
+    padding: 1rem;
+  }
+
+  .nav-link {
+    font-size: 20px;
+  }
+}
