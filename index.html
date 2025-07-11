@@ -10,42 +10,47 @@
   <div>
     <div class="spade">♠️</div>
 
-    <!-- Clicking the name brings you home -->
     <a href="index.html" class="name-title hover-link">Chuhan Nicole Zhang</a>
+    <a href="projects.html" class="project-link hover-link">View My Projects</a>
+    <a href="thoughts.html" class="thoughts-link hover-link">Read My Thoughts</a>
+    <a href="resume.pdf" class="resume-link hover-link" target="_blank">Resumé/CV</a>
+    <a href="#contact" class="contact-link hover-link">Contact</a>
+    <a href="index.html" class="home-link hover-link">Home</a>
+    <a href="#about" class="about-link hover-link">About Me</a>
 
-    <!-- Background box and headshot -->
-    <div class="background-box"></div>
-    <img src="assets/nicole-headshot.jpg" alt="Nicole Zhang" class="headshot" />
-
-    <!-- Navigation Links -->
-    <a href="projects.html" class="project-link nav-link">View My Projects</a>
-    <a href="thoughts.html" class="thoughts-link nav-link">Read My Thoughts</a>
-    <a href="assets/nicole-zhang-resume.pdf" target="_blank" class="resume-link nav-link">Resumé/CV</a>
-    <div class="contact-link nav-link">Contact</div>
-    <div class="home-link nav-link">Home</div>
-    <div class="about-link nav-link">About Me</div>
-
-    <!-- Quote -->
     <div class="quote">
       In the fields of observation, chance favors only the prepared mind — Louis Pasteur
     </div>
 
-    <!-- Intro Text -->
+    <img class="headshot" src="assets/nicole-headshot.jpg" alt="Nicole Zhang"/>
+
+    <div class="background-box"></div>
+
     <div class="intro-text">
-      Hi, I’m <span class="name-highlight hover-link">Nicole Zhang</span>.<br /><br />
-      I'm currently studying Mathematics and Computer Science at NYU, with a passion for algorithmic trading, AI research, and elegant systems design.<br /><br />
-      I’ve built AI-powered trading tools and supported bond desks in both New York and China. I craft simulations of markets, forecast storms with multimodal Machine Learning, and dive into jazz, Jane Austen, and Japanese lit. My projects span from deep learning weather models to game-based economic engines blending macro models with blockchain mechanics.<br /><br />
-      When I’m not coding or researching, you’ll find me getting lost in museums and mysteries.<br /><br />
+      Hi, I’m <span class="name-highlight">Nicole Zhang</span>.<br><br>
+      I'm currently studying Mathematics and Computer Science at NYU, with a passion for algorithmic trading, AI research, and elegant systems design.<br><br>
+      I’ve built AI-powered trading tools and supported bond desks in both New York and China. I craft simulations of markets, forecast storms with multimodal Machine Learning, and dive into jazz, Jane Austen, and Japanese lit. My projects span from deep learning weather models to game-based economic engines blending macro models with blockchain mechanics.<br><br>
+      When I’m not coding or researching, you’ll find me getting lost in museums and mysteries.<br><br>
       Always learning, always building, and always curious about what lies beyond the next dataset or dice roll <span class="dice">🎲</span>
     </div>
 
-    <!-- Project Preview for MarketM -->
     <div class="project-preview">
+      <!-- For now we show a screenshot or fallback -->
       <a href="https://marketm-chzzn.streamlit.app/" target="_blank">
-        <img src="assets/marketM-preview.png" alt="MarketM Project Preview" />
-        Visit MarketM Streamlit App →
+        <img src="assets/marketm-preview.jpg" alt="MarketM Streamlit Project Preview">
+        <span>Explore MarketM Project</span>
       </a>
     </div>
+
+    <!-- Optional: Cute Contact Form -->
+    <form id="contact" class="contact-form">
+      <h3>Say hi 💌</h3>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message..." rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+
   </div>
 </body>
 </html>
