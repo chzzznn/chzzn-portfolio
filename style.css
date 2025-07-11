@@ -60,7 +60,6 @@ body > div {
 
 .project-link, .thoughts-link, .resume-link, .contact-link, .home-link, .about-link {
   position: absolute;
-  height: 35px;
   font-size: 24px;
   font-family: Inter;
   font-weight: 654;
@@ -70,8 +69,8 @@ body > div {
   text-decoration: none;
 }
 
-.project-link { left: 535px; top: 41px; width: 210px; height: 32px; }
-.thoughts-link { left: 919px; top: 41px; width: 232px; height: 32px; }
+.project-link { left: 535px; top: 85px; width: 210px; height: 32px; }
+.thoughts-link { left: 919px; top: 85px; width: 232px; height: 32px; }
 .resume-link { left: 158px; top: 624px; width: 143px; height: 36px; }
 .contact-link { left: 158px; top: 670px; width: 143px; height: 36px; }
 .home-link { left: 158px; top: 533px; width: 143px; height: 36px; }
@@ -135,4 +134,32 @@ body > div {
   left: 43px;
   top: 106px;
   object-fit: cover;
+}
+
+.project-preview {
+  position: absolute;
+  top: 900px;
+  left: 509px;
+  width: 480px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-preview img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.project-preview a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  font-family: Inter;
+  font-weight: 600;
+  color: #322E2E;
+  text-decoration: none;
 }
