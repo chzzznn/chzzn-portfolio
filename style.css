@@ -1,0 +1,90 @@
+/* style.css */
+
+body {
+  background: white;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.name-title {
+  color: #322E2E;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+  position: absolute;
+  left: 99px;
+  top: 41px;
+}
+
+.project-link, .thoughts-link, .resume-link, .contact-link, .home-link, .about-link {
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+}
+
+.project-link { left: 535px; top: 41px; }
+.thoughts-link { left: 919px; top: 41px; }
+.resume-link { left: 158px; top: 624px; }
+.contact-link { left: 158px; top: 670px; }
+.home-link { left: 158px; top: 533px; }
+.about-link { left: 158px; top: 579px; }
+
+.quote {
+  color: #6D2F2F;
+  font-size: 32px;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 400;
+  text-transform: capitalize;
+  position: absolute;
+  left: 52px;
+  top: 739px;
+  width: 693px;
+}
+
+.intro-box {
+  position: absolute;
+  left: 509px;
+  top: 142px;
+  width: 627px;
+  height: 473px;
+  font-family: 'Iowan Old Style', serif;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: black;
+  font-size: 20px;
+}
+
+.intro-box span.name {
+  font-size: 40px;
+}
+
+.placeholder-img {
+  position: absolute;
+  left: 43px;
+  top: 106px;
+  width: 373px;
+  height: 373px;
+}
+
+.box {
+  background: #D9D9D9;
+  position: absolute;
+  width: 370px;
+  height: 373px;
+  left: 46px;
+  top: 106px;
+}
+
+.spade {
+  position: absolute;
+  top: 21px;
+  left: 22px;
+  font-size: 48px;
+  font-family: 'Alike Angular', serif;
+}
